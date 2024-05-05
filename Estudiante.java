@@ -1,6 +1,7 @@
 public class Estudiante extends Persona implements Trabajador{
 
     public String realizarTarea() {
+
         return "Realizando tarea escolar";
     }
 
