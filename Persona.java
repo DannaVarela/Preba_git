@@ -11,13 +11,26 @@ public class Persona {
 
     public String getNombre() { return this.Nombre;}
 
-    public void setNombre(String nombre) { this.Nombre = nombre;}
+    public void setNombre(String nombre) {
+        if (nombre == null || nombre.trim().isEmpty()){
+            throw new IllegalArgumentException("Tiene que completar este campo");
+        }
+        this.Nombre = nombre;
+    }
 
     public String getFechaNacimiento() { return this.FechaNacimiento;}
 
-    public void setFechaNacimiento(String fechaNacimiento) { this.FechaNacimiento = fechaNacimiento;}
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.FechaNacimiento = fechaNacimiento;
+    }
 
     public Integer getEdad() { return this.Edad;}
 
-    public void setEdad(Integer edad) { this.Edad = edad;}
+    public void setEdad(Integer edad) {
+
+        if (edad < 0){
+            throw new IllegalArgumentException("La edad no puede ser negativa");
+        }
+        this.Edad = edad;
+    }
 }
