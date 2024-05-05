@@ -1,4 +1,9 @@
-public class Estudiante extends Persona{
+public class Estudiante extends Persona implements Trabajador{
+
+    public String realizarTarea() {
+        return "Realizando tarea escolar";
+    }
+
     private String Grado;
     public Estudiante(String Nombre,String FechaNacimiento, Integer Edad, String Grado) {
         super(Nombre,FechaNacimiento, Edad);
