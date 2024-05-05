@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class Persona {
     private String Nombre;
     private String FechaNacimiento;
@@ -32,5 +35,10 @@ public class Persona {
             throw new IllegalArgumentException("La edad no puede ser negativa");
         }
         this.Edad = edad;
+    }
+
+    public String calcularFechaNacimiento(){
+        LocalDate fechaNacimiento = LocalDate.now().minusYears(getEdad());
+        return fechaNacimiento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
 }
