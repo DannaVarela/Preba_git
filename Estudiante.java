@@ -1,5 +1,6 @@
 public class Estudiante extends Persona{
-    public Estudiante(String Nombre, String FechaNacimiento, Integer Edad){
+    private String Grado;
+    public Estudiante(String Nombre, String FechaNacimiento, Integer Edad, String Grado){
         super(Nombre,FechaNacimiento, Edad);
     }
 }
