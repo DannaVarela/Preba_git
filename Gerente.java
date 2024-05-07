@@ -1,6 +1,6 @@
 public class Gerente extends Empleados{
     private float Bono;
-    public Gerente(String nombre, float salario) {
+    public Gerente(String nombre, float salario, float Bono) {
         super(nombre, salario);
         this.Bono = Bono;
     }
