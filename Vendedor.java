@@ -1,5 +1,5 @@
 public class Vendedor extends Empleados{
-    public Vendedor(String nombre, float salario) {
-        super(nombre, salario);
+    public Vendedor(String Nombre, float Salario) {
+        super(Nombre, Salario);
     }
 }
